@@ -2,7 +2,7 @@ DJANGO-BLOG
 
 A Blog Project has been implemented with user authentiction and facility to create posts and other CRUD features(CRUD:Create Read Update Delete) and make comments.
 
-A Chat feature is also provided as a separate project with redirects to and from the Blog.
+A Chat feature using channels is also provided as a separate project with redirects to and from the Blog.
 
 Requirements:
 1.BLOG_PROJECT:
