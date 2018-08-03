@@ -5,17 +5,23 @@ A Blog Project has been implemented with user authentiction and facility to crea
 A Chat feature using channels is also provided as a separate project with redirects to and from the Blog.
 
 Requirements:
-1.BLOG_PROJECT:
+BLOG_PROJECT:
 
-pip install -r requirements.txt             (DJANGO-BLOG/BLOG/BLOG_PROJECT/requirements.txt)
-or use virtual environment: source ven/bin/activate
+1.pip install -r requirements.txt            (DJANGO-BLOG/BLOG/BLOG_PROJECT/requirements.txt)
 
-To run development server: python manage.py runserver
+or use virtual environment:  source ven/bin/activate
 
-2.CHAT_PROJECT:
+2.To run development server: python manage.py runserver
 
-pip install -r requirements.txt            (DJANGO-BLOG/BLOG/CHAT_PROJECT/mysite/requirements.txt)
-or use virtual environment: source ven/bin/activate
+CHAT_PROJECT:
 
-To run development server: python manage.py runserver 5000 
+1.pip install -r requirements.txt            (DJANGO-BLOG/BLOG/CHAT_PROJECT/mysite/requirements.txt)
+
+or use virtual environment:  source env/bin/activate
+
+2.To run redis server:       sudo docker run -p 6379:6379 -d redis:2.8
+
+(redis server allows asynchronous communication)
+
+3.To run development server:  python manage.py runserver 5000 
 
