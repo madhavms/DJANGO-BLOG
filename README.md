@@ -5,6 +5,7 @@ A Blog Project has been implemented with user authentiction and facility to crea
 A Chat feature using channels is also provided as a separate project with redirects to and from the Blog.
 
 Requirements:
+
 BLOG_PROJECT:
 
 1.pip install -r blog_requirements.txt            
