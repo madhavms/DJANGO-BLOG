@@ -24,5 +24,5 @@ or use virtual environment:  source env/bin/activate
 
 (redis server allows asynchronous communication)
 
-3.To run development server:  python manage.py runserver 5000 
+3.To run development server:  python3 manage.py runserver 5000 
 
