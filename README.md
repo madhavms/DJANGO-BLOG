@@ -1,4 +1,4 @@
-                                                   DJANGO-BLOG
+                                                  DJANGO-BLOG
 
 A Blog Project has been implemented with user authentiction and facility to create posts and other CRUD features(CRUD:Create Read Update Delete) and make comments.
 
