@@ -7,7 +7,7 @@ A Chat feature using channels is also provided as a separate project with redire
 Requirements:
 BLOG_PROJECT:
 
-1.pip install -r requirements.txt            (DJANGO-BLOG/BLOG/BLOG_PROJECT/requirements.txt)
+1.pip install -r blog_requirements.txt            
 
 or use virtual environment:  source ven/bin/activate
 
@@ -15,7 +15,7 @@ or use virtual environment:  source ven/bin/activate
 
 CHAT_PROJECT:
 
-1.pip install -r requirements.txt            (DJANGO-BLOG/BLOG/CHAT_PROJECT/mysite/requirements.txt)
+1.pip install -r chat_requirements.txt            
 
 or use virtual environment:  source env/bin/activate
 
