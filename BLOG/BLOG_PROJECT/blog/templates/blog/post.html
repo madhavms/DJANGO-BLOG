@@ -21,7 +21,7 @@
 <div class="container">
 
 <h5>last edited at {{ post.updated }}</h5>
-{%if post.user in request.user.username %}
+{%if user == post.user %}
 <br><h4><a class="submit" href={%url 'blog:edit' post.id%}>Edit Post</a></h4></div>
 <div class="container">
 <br><h4><a class="submit" href={%url 'blog:delete' post.id%}>Delete Post</a></h4></div>
