@@ -24,7 +24,7 @@ A Blogging WebApplication made using Django Web Framework and Python:-
 
 2)Django = 1.11.4
 
-3)redis==2.10.6 
+3)redis = 2.10.6 
 
 (whole list provided in requirements.txt)
 
