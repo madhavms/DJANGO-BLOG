@@ -21,9 +21,9 @@ from Django_Max import views
 urlpatterns = [
     url(r'^$',views.login_redirect,name='login_redirect'),
     url(r'^admin/', admin.site.urls),
-    url(r'^account/',include('accounts.urls'),name='account'),
-    url(r'^blog/',include('blog.urls',namespace='blog'),name='blog'),
-    
+    url(r'^account/',include(('accounts.urls','account'),namespace='account')),
+    url(r'^blog/',include(('blog.urls','blog'),namespace='blog')),
+    url(r'^chat/', include(('chat.urls','chat'),namespace='chat')),
 
 
 ]

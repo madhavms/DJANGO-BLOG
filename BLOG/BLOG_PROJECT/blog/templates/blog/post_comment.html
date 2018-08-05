@@ -24,11 +24,14 @@
 
 <div class="container">
 <h1>Add Comments</h1>
+<h3>user:{{user}}</h5>
 <form action="" method="post">{% csrf_token %}
     {{ form|crispy }}
     <br><input type="submit" value="Submit" />
+
+  <br><br><h4><a class="link" href={%url 'blog:detail' post.id%}>Back</a></h4>
 </form>
-<br><h4><a class="link" href={%url 'blog:detail' post.id%}>Back</a></h4>
+
 </div>
 <div class="container">
 <hr>

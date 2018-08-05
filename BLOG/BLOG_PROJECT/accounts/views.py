@@ -12,28 +12,28 @@ from django.contrib.auth import update_session_auth_hash   #ENSURES THAT USER LO
 
 
 def register(request):
-	if request.method=='POST':
-		form =RegistrationForm(request.POST)
-		if form.is_valid():
-			form.save()
-			return redirect('/account/login')
-	else:
-		form = RegistrationForm()
+    if request.method=='POST':
+        form =RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/account/login')
+    else:
+        form = RegistrationForm()
         args = {'form':form}
         return render(request,'accounts/reg_form.html',args)
 @login_required
 def view_profile(request):
-    args={'user':request.user}
-    return render(request,'accounts/profile.html',args)
+       args={'user':request.user}
+       return render(request,'accounts/profile.html',args)
 @login_required
 def edit_profile(request):
     if request.method=='POST':
         form =EditProfileForm(request.POST,instance=request.user)
         if form.is_valid():
-            form.save()
-            return redirect('/account/profile')
+           form.save()
+           return redirect('/account/profile')
         else:
-            return redirect('/account/profile/edit')
+           return redirect('/account/profile/edit')
     else:
         form=EditProfileForm(instance=request.user)
         args={'form':form}

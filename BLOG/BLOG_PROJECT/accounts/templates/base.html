@@ -17,31 +17,36 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="">TEST BLOG</a>
       {%block login%}
-      <a class="navbar-brand nav navbar-right" href="{%url 'login'%}">Login</a>
+      <a class="navbar-brand nav navbar-right" href="{%url 'account:login'%}">Login</a>
       {%endblock%}
     </div>
     {%block register%}
-  <a class="navbar-brand nav navbar-right" href="{% url 'register'%}">Register</a>  <!--this templating gives direct access to the url that is given name='register'-->
+  <a class="navbar-brand nav navbar-right" href="{% url 'account:register'%}">Register</a>  <!--this templating gives direct access to the url that is given name='register'-->
    {%endblock%}
 
    {%block logout%}
- <a class="navbar-brand nav navbar-right" href="{% url 'logout'%}">Logout</a>  <!--this templating gives direct access to the url that is given name='register'-->
+ <a class="navbar-brand nav navbar-right" href="{% url 'account:logout'%}">Logout</a>  <!--this templating gives direct access to the url that is given name='register'-->
   {%endblock%}
 
   {%block profile%}
-  <a class="navbar-brand nav navbar-right" href="{%url 'view_profile'%}">Profile</a>
+  <a class="navbar-brand nav navbar-right" href="{%url 'account:view_profile'%}">Profile</a>
   {%endblock%}
   {%block home%}
   <a class="navbar-brand" href="{%url 'blog:home'%}">Home</a>
   {%endblock%}
+{%block admin%}
+  {% if user.is_active and user.is_staff %}
+    <a class="navbar-brand" href="{%url 'blog:home'%}">Admin Dashboard</a>
+{% endif %}
+{%endblock%}
   {%block edit_profile%}
-  <a class="navbar-brand nav navbar-right" href="{%url 'edit_profile'%}">Edit Profile</a>
+  <a class="navbar-brand nav navbar-right" href="{%url 'account:edit_profile'%}">Edit Profile</a>
   {%endblock%}
   {%block chat%}
-  <a class="navbar-brand nav navbar-right" href="http://127.0.0.1:5000/chat">Chat</a>
+  <a class="navbar-brand nav navbar-right" href="{%url 'chat:index'%}">Chat</a>
   {%endblock%}
   {%block change_password%}
-  <a class="navbar-brand nav navbar-right" href="{%url 'change_password'%}">Change Password</a>
+  <a class="navbar-brand nav navbar-right" href="{%url 'account:change_password'%}">Change Password</a>
   {%endblock%}
   {%block view%}
   <a class="navbar-brand nav navbar-right" href="{%url 'blog:view'%}">View Posts</a>

@@ -7,7 +7,7 @@ from django.db import models
 class Post(models.Model):
     title= models.CharField(max_length=50)
     post = models.TextField()
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True) #add date when object was created
     updated = models.DateTimeField(auto_now=True)
     def __str__(self):
@@ -16,8 +16,8 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('view', kwargs={'pk': self.pk})
 class Comment(models.Model):
-    post = models.ForeignKey('blog.Post',related_name='comments')
-    author = models.CharField(max_length=200)
+    post = models.ForeignKey('blog.Post',related_name='comments',on_delete=models.CASCADE)
+    author = models.ForeignKey(User,on_delete=models.CASCADE)
     text = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     approved_comment = models.BooleanField(default=False)

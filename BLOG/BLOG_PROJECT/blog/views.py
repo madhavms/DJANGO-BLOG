@@ -5,7 +5,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from blog.models import Post,Comment
 from django.views.generic import UpdateView,DeleteView,CreateView
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
+from django.urls import reverse  #for python3 django.urlresolvers won't work
 from django.views.generic import DetailView
 from django.http import HttpResponse, Http404
 class HomeView(TemplateView):
@@ -68,14 +68,16 @@ class DeletePost(DeleteView):
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
-        form = CommentForm(request.POST)
+        form = CommentForm(request.user,request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
+            comment.user = request.user
             comment.post = post
             comment.save()
             return redirect('blog:detail', pk=post.pk)
     else:
-        form = CommentForm()
+        form = CommentForm(request.user)
+
     return render(request, 'blog/post_comment.html', {'form': form,'post':post})
 class DetailPost(DetailView):
     model = Post
