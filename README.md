@@ -18,7 +18,7 @@ App Features:
 6)User Profile page.
 
 
-Major Package Verions:
+Major Package Versions:
 
 1)Python = 3.5.3
 
