@@ -1,4 +1,4 @@
-                                                  DJANGO-BLOG
+                                                  **DJANGO-BLOG**
 
 
 A Blogging WebApplication made using Django Web Framework and Python:-
@@ -32,17 +32,17 @@ Major Package Versions:
 App Requirements:
 
 
-1.pip install -r requirements.txt
+1.'pip install -r requirements.txt'
 
-or use virtual environment(ven):  source ven/bin/activate
+or use virtual environment(ven):  'source ven/bin/activate'
 
 
-2.To run redis server:  sudo docker run -p 6379:6379 -d redis:2.8
+2.To run redis server:  'sudo docker run -p 6379:6379 -d redis:2.8'
 
 (redis server allows asynchronous communication)
 
 
-3.To run development server: python manage.py runserver
+3.To run development server: 'python manage.py runserver'
 
 
 (after running virtual environment)
