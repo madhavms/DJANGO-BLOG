@@ -3,7 +3,7 @@
 
 A Blogging WebApplication made using Django Web Framework and Python:-
 
-**App Features:
+**App Features**:
 
 1)User Registration,Login,Change and Reset Password.
 
@@ -18,7 +18,7 @@ A Blogging WebApplication made using Django Web Framework and Python:-
 6)User Profile page.
 
 
-**Major Package Versions:
+**Major Package Versions**:
 
 1)Python = 3.5.3
 
@@ -29,7 +29,7 @@ A Blogging WebApplication made using Django Web Framework and Python:-
 (whole list provided in requirements.txt)
 
 
-**App Requirements:
+**App Requirements**:
 
 
 1.`pip install -r requirements.txt`
