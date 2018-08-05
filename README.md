@@ -1,9 +1,9 @@
-                                                Django_Blog
+# Django_Blog
 
 
 A Blogging WebApplication made using Django Web Framework and Python:-
 
-App Features:
+**App Features:
 
 1)User Registration,Login,Change and Reset Password.
 
@@ -18,7 +18,7 @@ App Features:
 6)User Profile page.
 
 
-Major Package Versions:
+**Major Package Versions:
 
 1)Python = 3.5.3
 
@@ -29,7 +29,7 @@ Major Package Versions:
 (whole list provided in requirements.txt)
 
 
-App Requirements:
+**App Requirements:
 
 
 1.`pip install -r requirements.txt`
