@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-
+from django.contrib import admin
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -154,3 +154,4 @@ CHANNEL_LAYERS = {
         },
     },
 }
+admin.site.site_url = '/blog' #Address the 'view site' button in admin redirects to

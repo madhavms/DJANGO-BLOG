@@ -36,7 +36,7 @@
   {%endblock%}
 {%block admin%}
   {% if user.is_active and user.is_staff %}
-    <a class="navbar-brand" href="{%url 'blog:home'%}">Admin Dashboard</a>
+    <a class="navbar-brand" href="{%url 'admin:index'%}">Admin Dashboard</a>
 {% endif %}
 {%endblock%}
   {%block edit_profile%}
