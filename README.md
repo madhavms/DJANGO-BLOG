@@ -1,4 +1,4 @@
-                                                  # DJANGO-BLOG
+                                                 # H1
 
 
 A Blogging WebApplication made using Django Web Framework and Python:-
