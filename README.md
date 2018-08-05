@@ -1,28 +1,48 @@
                                                   DJANGO-BLOG
 
-A Blog Project has been implemented with user authentiction and facility to create posts and other CRUD features(CRUD:Create Read Update Delete) and make comments.
 
-A Chat feature using channels is also provided as a separate project with redirects to and from the Blog.
+A Blogging WebApplication made using Django Web Framework and Python:-
 
-Requirements:
+App Features:
 
-BLOG_PROJECT:
+1)User Registration,Login,Change and Reset Password.
 
-1.pip install -r blog_requirements.txt            
+2)Create, Read, Update and Delete posts (Update and Delete feature only for post author).
 
-or use virtual environment:  source ven/bin/activate
+3)Users can comment on the post.
 
-2.To run development server: python manage.py runserver
+4)Chat Room for users.
 
-CHAT_PROJECT:
+5)Admin Dashboard.
 
-1.pip install -r chat_requirements.txt            
+6)User Profile page.
 
-or use virtual environment:  source env/bin/activate
 
-2.To run redis server:       sudo docker run -p 6379:6379 -d redis:2.8
+Major Package Verions:
+
+1)Python = 3.5.3
+
+2)Django = 1.11.4
+
+3)redis==2.10.6 
+
+(whole list provided in requirements.txt)
+
+
+App Requirements:
+
+
+1.pip install -r requirements.txt
+
+or use virtual environment(ven):  source ven/bin/activate
+
+
+2.To run redis server:  sudo docker run -p 6379:6379 -d redis:2.8
 
 (redis server allows asynchronous communication)
 
-3.To run development server:  python3 manage.py runserver 5000 
 
+3.To run development server: python manage.py runserver
+
+
+(after running virtual environment)
