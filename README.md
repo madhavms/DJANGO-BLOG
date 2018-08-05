@@ -1,4 +1,4 @@
-                                                 # This is an <h1> tag
+                                                Django_Blog
 
 
 A Blogging WebApplication made using Django Web Framework and Python:-
