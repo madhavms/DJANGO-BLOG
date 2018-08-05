@@ -1,4 +1,4 @@
-                                                   #DJANGO-BLOG
+                                                  # DJANGO-BLOG
 
 
 A Blogging WebApplication made using Django Web Framework and Python:-
