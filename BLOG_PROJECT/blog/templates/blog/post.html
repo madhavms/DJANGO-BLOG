@@ -38,8 +38,7 @@
 {% for comments in post.comments.all  %}
     <div class="comment" style="overflow: hidden;">
         <div class="date">{{comments.created_date }} </div>
-        <strong>{{ comments.author }}:</strong>
-        <p>{{ comments.text|linebreaks }}</p><br>
+      <p><strong>{{ comments.author }}:</strong> {{ comments.text}}<p>
 
 
 </div>
