@@ -22,16 +22,16 @@
 
 <h5>last edited at {{ post.updated }}</h5>
 {%if user == post.user %}
-<br><h4><a class="submit" href={%url 'blog:edit' post.id%}>Edit Post</a></h4></div>
+<h4><a class="btn" href={%url 'blog:edit' post.id%}>Edit Post</a></h4></div>
 <div class="container">
-<br><h4><a class="submit" href={%url 'blog:delete' post.id%}>Delete Post</a></h4></div>
+<h4><a class="btn" href={%url 'blog:delete' post.id%}>Delete Post</a></h4></div>
 
 <div class="container">
 {%endif%}
 
-<br><h4><a class="link" href={%url 'blog:view'%}>Back</a></h4>
-<br><h4><a class="link" href={%url 'blog:comment' post.id%}>Comment</a></h4>
-<h3>Comments:</h3>
+<h4><a class="btn" href={%url 'blog:view'%}>Back</a></h4>
+<h4><a class="btn" href={%url 'blog:comment' post.id%}>Comment</a></h4>
+<h4>Comments:</h4>
 <div class="container">
 
 

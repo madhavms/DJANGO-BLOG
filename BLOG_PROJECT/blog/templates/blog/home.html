@@ -5,16 +5,16 @@
 <title>Home</title>
 {%endblock%}
 {%block body%}
-<h4>Welcome {{request.user.username}} you can create posts here</h4>
+
 <div class="container">
+<h4>Welcome {{request.user.username}} you can create posts here</h4>
 
-
-<h1>Create Post</h1>
-<form method="post">
+<h3>Create Post</h3>
+<form method="post" id="post-form">
 {%csrf_token%}
 {{form.title}}
 <br>{{form.post}}
-<br><button type="submit">Submit</button>
+<br><button type="submit" class="btn">Submit</button>
 </form>
 
 </div>

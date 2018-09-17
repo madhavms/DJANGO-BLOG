@@ -6,9 +6,9 @@
 <h1>Delete Post</h1>
 <form method="post">{% csrf_token %}
     Are you sure you want to delete "{{ object }}" ?
-  <br>  <br><input type="submit" value="Submit" />
-</form></div>
-
+  <br>  <br><input type="submit" class="btn" value="Submit" />
+  </form>
+<br><a class="btn" href={%url 'blog:detail' post.id%}>Back</a></div><br>
 {%endblock%}
 {%block login%}
 {%endblock%}

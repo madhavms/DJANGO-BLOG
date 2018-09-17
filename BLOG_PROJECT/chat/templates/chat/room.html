@@ -12,8 +12,8 @@
 <body>
     <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
     <input id="chat-message-input" type="text" size="100"/><br/>
-    <br><input id="chat-message-submit" type="button" value="Send"/>
-    <br><h4><a class="link" href="{%url 'chat:index'%}">Back</a></h4>
+    <br><input id="chat-message-submit" type="button" class ="btn" value="Send"/><br>
+    <br><a class="btn" href="{%url 'chat:index'%}">Back</a>
 
 </body>
 <script>
@@ -27,6 +27,8 @@
         var data = JSON.parse(e.data);
         var message = data['message'];
         var username = data['username'];
+
+
         document.querySelector('#chat-log').value += (username+":"+message + '\n');
     };
 
