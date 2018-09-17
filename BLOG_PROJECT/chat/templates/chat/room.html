@@ -13,8 +13,8 @@
     <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
     <input id="chat-message-input" type="text" size="100"/><br/>
     <br><input id="chat-message-submit" type="button" value="Send"/>
-    <br><h4><a class="link" href="{%url 'chat:index'%}">Back to chat</a></h4>
-    <br><h4><a class="link" href="{%url 'blog:home'%}">Back to blog</a></h4>
+    <br><h4><a class="link" href="{%url 'chat:index'%}">Back</a></h4>
+
 </body>
 <script>
     var roomName = {{ room_name_json }};
@@ -26,7 +26,8 @@
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
         var message = data['message'];
-        document.querySelector('#chat-log').value += (message + '\n');
+        var username = data['username'];
+        document.querySelector('#chat-log').value += (username+":"+message + '\n');
     };
 
     chatSocket.onclose = function(e) {
