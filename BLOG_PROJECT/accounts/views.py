@@ -29,6 +29,7 @@ def view_profile(request):
 def edit_profile(request):
     if request.method=='POST':
         form =EditProfileForm(request.POST,instance=request.user)
+        
         if form.is_valid():
            form.save()
            return redirect('/account/profile')

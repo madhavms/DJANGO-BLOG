@@ -15,44 +15,59 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="">TEST BLOG</a>
-      {%block login%}
-      <a class="navbar-brand nav navbar-right" href="{%url 'account:login'%}">Login</a>
-      {%endblock%}
+      <a class="navbar-brand" href="">MY BLOG</a>
     </div>
+      <ul class="nav navbar-nav navbar-right">
+
+
+      {%block login%}
+      <li><a  href="{%url 'account:login'%}"><span class="glyphicon glyphicon-log-in"></span> Login</a><li>
+      {%endblock%}
+
     {%block register%}
-  <a class="navbar-brand nav navbar-right" href="{% url 'account:register'%}">Register</a>  <!--this templating gives direct access to the url that is given name='register'-->
+  <li><a  href="{% url 'account:register'%}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>  <!--this templating gives direct access to the url that is given name='register'-->
    {%endblock%}
 
-   {%block logout%}
- <a class="navbar-brand nav navbar-right" href="{% url 'account:logout'%}">Logout</a>  <!--this templating gives direct access to the url that is given name='register'-->
-  {%endblock%}
 
-  {%block profile%}
-  <a class="navbar-brand nav navbar-right" href="{%url 'account:view_profile'%}">Profile</a>
-  {%endblock%}
+
+
+  {%block logout%}
+<li><a  href="{% url 'account:logout'%}">Logout</a></li>  <!--this templating gives direct access to the url that is given name='register'-->
+ {%endblock%}
+  </ul>
+  <ul class="nav navbar-nav">
   {%block home%}
-  <a class="navbar-brand" href="{%url 'blog:home'%}">Home</a>
+  <li><a href="{%url 'blog:home'%}">Home</a></li>
   {%endblock%}
 
 {%block admin%}
   {% if user.is_active and user.is_staff %}
-    <a class="navbar-brand" href="{%url 'admin:index'%}">Admin Dashboard</a>
+    <li><a href="{%url 'admin:index'%}">Admin Dashboard</a></li>
 {% endif %}
 {%endblock%}
+</ul>
+  <div class="container">
+
+
+  <ul class="nav navbar-nav navbar-right">
+    {%block view%}
+    <li><a class='btn' href="{%url 'blog:view'%}">View Posts</a></li>
+    {%endblock%}
   {%block edit_profile%}
-  <a class="navbar-brand nav navbar-right" href="{%url 'account:edit_profile'%}">Edit Profile</a>
+<li><a class='btn' href="{%url 'account:edit_profile'%}">Edit Profile</a></li>
   {%endblock%}
   {%block chat%}
-  <a class="navbar-brand nav navbar-right" href="{%url 'chat:index'%}">Chat</a>
+  <li><a class='btn' href="{%url 'chat:index'%}"><span class="glyphicons glyphicons-chat"></span> Chat</a></li>
+  {%endblock%}
+  {%block profile%}
+<li><a class='btn' href="{%url 'account:view_profile'%}">Profile</a></li>
   {%endblock%}
   {%block change_password%}
-  <a class="navbar-brand nav navbar-right" href="{%url 'account:change_password'%}">Change Password</a>
-  {%endblock%}
-  {%block view%}
-  <a class="navbar-brand nav navbar-right" href="{%url 'blog:view'%}">View Posts</a>
+  <li><a class='btn' href="{%url 'account:change_password'%}">Change Password</a></li>
   {%endblock%}
 
+  </ul>
+</div>
   </div>
 </nav>
 
