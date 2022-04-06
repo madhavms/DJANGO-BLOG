@@ -23,7 +23,7 @@ pytz==2018.5
 redis==2.10.6 
 setuptools==40.0.0 
 six==1.11.0 
-Twisted==18.7.0 
+Twisted==22.2.0 
 txaio==18.7.1 
 wheel==0.31.1 
 zope.interface==4.5.0  
